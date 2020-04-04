@@ -26,7 +26,7 @@ header #header-background #header-background-img {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url("./assets/background_header_2.jpg");
+  background: url("../assets/background_header_2.jpg");
   opacity: 0.3;
   background-size: cover;
   background-repeat: no-repeat;
@@ -68,10 +68,21 @@ header #header-menu-wrapper #header-menu {
 }
 header #header-menu-wrapper #header-menu .header-menu-item {
   width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: none;
   transition: background-color 0.3s;
 }
 header #header-menu-wrapper #header-menu .header-menu-item .header-menu-label {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
 }
 header #header-menu-wrapper #header-menu .header-menu-item:not(:last-child) {
   border-right: 1px solid rgba(0, 31, 92, 0.582);
@@ -83,7 +94,7 @@ header #header-menu-wrapper #header-menu .header-menu-item:hover {
 
 #content-wrapper {
   z-index: 1;
-  margin-top: 80ch;
+  padding-top: 80ch;
   margin-left: 15%;
   margin-right: 15%;
   display: flex;
@@ -145,6 +156,15 @@ header #header-menu-wrapper #header-menu .header-menu-item:hover {
 }
 #content-wrapper #education-wrapper .education-line .experience-content .trackline-dot, #content-wrapper #education-wrapper .experience-line .experience-content .trackline-dot, #content-wrapper #experience-wrapper .education-line .experience-content .trackline-dot, #content-wrapper #experience-wrapper .experience-line .experience-content .trackline-dot {
   right: -15px;
+}
+#content-wrapper #skills-wrapper {
+  width: 100%;
+  padding-left: 0;
+}
+#content-wrapper #skills-wrapper .it-skills-wrapper {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
 }
 
 /*# sourceMappingURL=style.css.map */

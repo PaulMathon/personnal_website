@@ -21,21 +21,21 @@
           </div>
         </div>
         <div id="profile-picture-wrapper">
-          <img src="./assets/profile.jpg" id="profile-picture-img" alt="Profile picture">
+          <img src="../assets/profile.jpg" id="profile-picture-img" alt="Profile picture">
         </div>
         <div id="header-menu-wrapper">
           <nav id="header-menu">
             <div class="header-menu-item">
-              <p class="header-menu-label">Education</p>
+              <a class="header-menu-label" href="#education">Education</a>
             </div>
             <div class="header-menu-item">
-              <p class="header-menu-label">Experience</p>
+              <a class="header-menu-label" href="#experience">Experience</a>
             </div>
             <div class="header-menu-item">
-              <p class="header-menu-label">Skills</p>
+              <a class="header-menu-label" href="#skills">Skills</a>
             </div>
             <div class="header-menu-item">
-              <p class="header-menu-label">Miscellaneous</p>
+              <a class="header-menu-label" href="#miscellaneous">Miscellaneous</a>
             </div>
           </nav>
         </div>
@@ -43,7 +43,7 @@
 
       <div id="content-wrapper">
     
-        <h2 class="content-title">EDUCATION</h2>
+        <h2 id="education" class="content-title">EDUCATION</h2>
         <ul id="education-wrapper">
           <li class="education-line">
             <div class="education-coord">
@@ -80,7 +80,7 @@
           </li>
         </ul>
 
-        <h2 class="content-title">TRAINING & WORK EXPERIENCE</h2>
+        <h2 id="experience" class="content-title">TRAINING & WORK EXPERIENCE</h2>
         <ul id="experience-wrapper">
           <li class="experience-line">
             <div class="experience-content">
@@ -117,10 +117,52 @@
           </li>
         </ul>
 
-        <h2 class="content-title">SKILLS & QUALIFICATIONS</h2>
+        <h2 id="skills" class="content-title">SKILLS & QUALIFICATIONS</h2>
         <div id="skills-wrapper">
-          <div id="it-skills-wrapper"></div>
-          <div id="other-it-skills-wrapper"></div>
+          <ul class="it-skills-wrapper">
+            <li class="it-skills-section">
+              <h3>Backend</h3>
+              <div class="it-skills-content">
+                <p>Node.js [Express]</p>
+                <p>Python [Flask]</p>
+                <p>NoSQL [Mongo]</p>
+                <p>PostgreSQL</p>
+              </div>
+            </li>
+            <li class="it-skills-section">
+              <h3>Machine Learning</h3>
+              <div class="it-skills-content">
+                <p>Python [pandas, scikit-learn, tensorflow]</p>
+              </div>
+            </li>
+            <li class="it-skills-section">
+              <h3>Frontend</h3>
+              <div class="it-skills-content">
+                <p>TypeScript [Angular]</p>
+                <p>HTML, CCS, JS [ES6]</p>
+              </div>
+            </li>
+          </ul>
+          <ul class="it-skills-wrapper">
+            <li class="it-skills-section">
+              <h3>Dev Tools</h3>
+              <div class="it-skills-content">
+                <p>Git</p>
+                <p>Docker</p>
+                <p>Jenkins, Gitlab-ci</p>
+                <p>Testing</p>
+              </div>
+            </li>
+            <li class="it-skills-section">
+              <h3>IDEs</h3>
+              <div class="it-skills-content">
+                <p>VS Code</p>
+                <p>IntelliJ</p>
+                <p>XCode</p>
+                <p>Jupyter</p>
+              </div>
+            </li>
+          </ul>
         </div>
 
         <h2 class="content-title">LANGUAGES</h2>
@@ -129,7 +171,7 @@
           <div class="language-content"></div>
         </div>
 
-        <h2 class="content-title">MISCELLANEOUS</h2>
+        <h2 id="miscellaneous" class="content-title">MISCELLANEOUS</h2>
         <div id="miscellaneous-wrapper">
           <div class="miscellaneous-content"></div>
           <div class="miscellaneous-content"></div>
