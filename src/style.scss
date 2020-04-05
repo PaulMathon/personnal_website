@@ -1,9 +1,9 @@
-$font-stack: 'Roboto Condensed', Helvetica, sans-serif;
-$primary-color: rgb(0,32,96);
+$font-stack: "Roboto Condensed", Helvetica, sans-serif;
+$primary-color: rgb(0, 32, 96);
 $shape-color: rgba(0, 31, 92, 0.719);
 $light-gray: rgb(250, 250, 250);
 
-body {    
+body {
   font: 100% $font-stack;
   margin: 0 !important;
   padding: 0 !important;
@@ -12,19 +12,19 @@ body {
 
 header {
   height: 75ch;
-  min-height: 30ch;
+  min-height: 20ch;
   position: fixed;
   top: 0;
   width: 100%;
-  z-index:2;
+  z-index: 2;
 
   #header-background {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60%;
-    max-height: 60%;
+    height: 47ch;
+    min-height: 16ch;
     border-bottom: 2px solid $shape-color;
 
     #header-background-img {
@@ -32,9 +32,9 @@ header {
       width: 100%;
       height: 100%;
       background: url("../assets/background_header_2.jpg");
-      opacity: .3;
-      background-size:     cover;
-      background-repeat:   no-repeat;
+      opacity: 0.3;
+      background-size: cover;
+      background-repeat: no-repeat;
       background-position: center center;
       display: flex;
       align-items: center;
@@ -44,7 +44,7 @@ header {
     #header-background-title {
       display: flex;
       justify-content: center;
-  
+
       .header-background-title-label {
         margin: 0;
         color: $primary-color;
@@ -58,9 +58,9 @@ header {
 
     #profile-picture-img {
       position: absolute;
-      left: 42%;
-      top: -8vw;
-      width: 16%;
+      left: 44%;
+      top: -6vw;
+      width: 12%;
       border-radius: 50%;
       border: 4px solid $shape-color;
     }
@@ -68,11 +68,12 @@ header {
 
   #header-menu-wrapper {
     padding-top: 20ch;
+    height: 8ch;
     border-top: 2px solid $shape-color;
     background: linear-gradient(rgb(219, 219, 219), rgb(250, 250, 250));
 
     #header-menu {
-      height: 10ch;
+      height: 100%;
       display: flex;
       justify-content: space-around;
       align-items: center;
@@ -101,7 +102,10 @@ header {
       }
       .header-menu-item:hover {
         cursor: pointer;
-        background-image: radial-gradient(rgba(233, 233, 233, 0.404), rgba(240, 240, 240, 0.404));
+        background-image: radial-gradient(
+          rgba(233, 233, 233, 0.404),
+          rgba(240, 240, 240, 0.404)
+        );
       }
     }
   }
@@ -126,15 +130,18 @@ header {
     border-bottom: 1px solid $shape-color;
   }
 
-  #education-wrapper, #experience-wrapper {
+  #education-wrapper,
+  #experience-wrapper {
     width: 100%;
     list-style-type: none;
     padding-left: 0;
 
-    .education-line, .experience-line {
+    .education-line,
+    .experience-line {
       display: flex;
 
-      .education-coord, .experience-coord {
+      .education-coord,
+      .experience-coord {
         width: 30%;
       }
 
@@ -147,9 +154,10 @@ header {
         padding-left: 5%;
         border-left: 3px solid $shape-color;
       }
-  
-      .education-content, .experience-content {
-        width: 70%;
+
+      .education-content,
+      .experience-content {
+        width: 50%;
         min-height: 110px;
         position: relative;
 
@@ -192,6 +200,51 @@ header {
       display: flex;
       justify-content: space-around;
     }
-    
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid white;
+  background-color: rgba(17, 17, 17, 0.733);
+  padding-left: 15%;
+  padding-right: 15%;
+  height: 25ch;
+
+  #contact {
+    display: inline-block;
+    color: $light-gray;
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 5px;
+    border-bottom: 1px solid $light-gray;
+  }
+  #contact-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+
+    .contact-column {
+      .contact-line {
+        display: flex;
+
+        .contact-logo {
+          img {
+            width: 30px;
+            height: 30px;
+          }
+        }
+
+        a {
+          color: $light-gray;
+          text-decoration: none;
+          padding-left: 5%;
+        }
+      }
+    }
   }
 }
