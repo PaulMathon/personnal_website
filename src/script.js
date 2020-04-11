@@ -1,4 +1,15 @@
+const HEADER_MIN_SIZE = 24;
+const HEADER_MAX_SIZE = 75;
 const HEADER_TOGGLING_SIZE = 47;
+
+const TOGGLE_TITLE_LIMIT = 100;
+const TOGGLE_TITLE_RATE = TOGGLE_TITLE_LIMIT / HEADER_TOGGLING_SIZE;
+
+const TOGGLE_MENU_LIMIT = 20;
+const TOGGLE_MENU_RATE = HEADER_TOGGLING_SIZE / TOGGLE_MENU_LIMIT;
+
+const TOGGLE_MENU_ITEM_LIMIT = 7;
+const TOGGLE_MENU_ITEM_RATE = HEADER_TOGGLING_SIZE / TOGGLE_MENU_ITEM_LIMIT;
 
 const toggleHeaderBackground = (scrollState) => {
   document.getElementById("header-background").style.height = `${
@@ -9,26 +20,25 @@ const toggleHeaderBackground = (scrollState) => {
 const toggleHeaderTitle = (scrollState) => {
   document.getElementsByClassName(
     "header-background-title-label"
-  )[0].style.marginRight = `${scrollState * 2.13}%`;
+  )[0].style.marginRight = `${scrollState * TOGGLE_TITLE_RATE}%`;
   document.getElementsByClassName(
     "header-background-title-label"
-  )[1].style.marginLeft = `${scrollState * 2.13}%`;
+  )[1].style.marginLeft = `${scrollState * TOGGLE_TITLE_RATE}%`;
 };
 
 const toggleHeaderMenu = (scrollState) => {
-  console.log("exe", scrollState, 20 - scrollState);
   document.getElementById("header-menu-wrapper").style.paddingTop = `${
-    20 - scrollState / 2.25
+    TOGGLE_MENU_LIMIT - scrollState / TOGGLE_MENU_RATE
   }ch`;
   document.getElementsByClassName(
     "header-menu-item"
-  )[1].style.paddingRight = `${scrollState / 6.71}%`;
+  )[1].style.paddingRight = `${scrollState / TOGGLE_MENU_ITEM_RATE}%`;
   document.getElementsByClassName("header-menu-item")[2].style.paddingLeft = `${
-    scrollState / 6.71
+    scrollState / TOGGLE_MENU_ITEM_RATE
   }%`;
 };
 
-const convertToCh = () => {
+const getScrollState = () => {
   if (window.pageYOffset <= window.innerHeight) {
     return Math.floor((window.pageYOffset / window.innerHeight) * 100);
   } else {
@@ -38,8 +48,7 @@ const convertToCh = () => {
 
 let isToggleHeaderEnd = false;
 const toggleHeader = () => {
-  const slowScrollY = convertToCh();
-  console.log("state", slowScrollY);
+  const slowScrollY = getScrollState();
   if (slowScrollY <= HEADER_TOGGLING_SIZE) {
     isToggleHeaderEnd = false;
     document.getElementsByTagName("header")[0].style.height = `${
@@ -54,23 +63,25 @@ const toggleHeader = () => {
     document.getElementById("header-background").style.height = "16ch";
     document.getElementsByClassName(
       "header-background-title-label"
-    )[0].style.marginRight = "100%";
+    )[0].style.marginRight = `${TOGGLE_TITLE_LIMIT}%`;
     document.getElementsByClassName(
       "header-background-title-label"
-    )[1].style.marginLeft = "100%";
+    )[1].style.marginLeft = `${TOGGLE_TITLE_LIMIT}%`;
     document.getElementById("header-menu-wrapper").style.paddingTop = "0";
-    document.getElementsByClassName("header-menu-item")[1].style.paddingRight =
-      "7%";
-    document.getElementsByClassName("header-menu-item")[2].style.paddingLeft =
-      "7%";
+    document.getElementsByClassName(
+      "header-menu-item"
+    )[1].style.paddingRight = `${TOGGLE_MENU_ITEM_LIMIT}%`;
+    document.getElementsByClassName(
+      "header-menu-item"
+    )[2].style.paddingLeft = `${TOGGLE_MENU_ITEM_LIMIT}%`;
   }
 };
 
 const scrollHeaderAnim = () => {
+  toggleHeader();
   window.onscroll = toggleHeader;
 };
 
 window.onload = () => {
-  toggleHeader();
   scrollHeaderAnim();
 };

@@ -1,0 +1,26 @@
+{
+  "name": "www",
+  "version": "1.0.0",
+  "description": "🚧🚧🚧🚧",
+  "scripts": {
+    "watch": "sass --watch src/style.scss src/style.css",
+    "bundle": "mkdir -p dist && cp src/index.html dist/index.html && sass src/style.scss dist/style.css && webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PaulMathon/personnal_website.git"
+  },
+  "author": "Paul Mathon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PaulMathon/personnal_website/issues"
+  },
+  "homepage": "https://github.com/PaulMathon/personnal_website#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "sass": "^1.26.3",
+    "terser-webpack-plugin": "^2.3.5",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  }
+}
