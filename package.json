@@ -18,6 +18,7 @@
   "homepage": "https://github.com/PaulMathon/personnal_website#readme",
   "dependencies": {},
   "devDependencies": {
+    "eslint": "^6.8.0",
     "sass": "^1.26.3",
     "terser-webpack-plugin": "^2.3.5",
     "webpack": "^4.42.1",

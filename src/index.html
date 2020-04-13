@@ -15,7 +15,8 @@
       rel="stylesheet"
     />
     <link href="style.css" rel="stylesheet" />
-    <script type="text/javascript" src="script.js"></script>
+    <script type="module" src="./script.js"></script>
+    <script type="module" src="./page.js"></script>
   </head>
   <body>
     <header>
@@ -52,188 +53,197 @@
     </header>
 
     <div id="content-wrapper">
-      <h2 id="education" class="content-title">EDUCATION</h2>
-      <ul id="education-wrapper">
-        <li class="education-line">
-          <div class="education-coord">
-            <p>2015</p>
-            <p>Marcq-en-Baroeul - France</p>
-          </div>
-          <div class="education-content">
-            <div class="trackline-dot"></div>
-            <h3>High School Diploma</h3>
-            <p>Private High School of Marcq-en-Baroeul</p>
-          </div>
-        </li>
-        <li class="education-line">
-          <div class="education-coord">
-            <p>2015 - 2017</p>
-            <p>Lille - France</p>
-          </div>
-          <div class="education-content">
-            <div class="trackline-dot"></div>
-            <h3>
-              Intensive program preparing for entry to engineering schools
-            </h3>
-            <p>La salle</p>
-          </div>
-        </li>
-        <li class="education-line">
-          <div class="education-coord">
-            <p>2015</p>
-            <p>Marcq-en-Baroeul - France</p>
-          </div>
-          <div class="education-content">
-            <div class="trackline-dot"></div>
-            <h3>HEI diploma, IT specialty</h3>
-            <p>HEI, Hautes Etudes d'Ingénieur</p>
-          </div>
-        </li>
-      </ul>
-
-      <h2 id="experience" class="content-title">TRAINING & WORK EXPERIENCE</h2>
-      <ul id="experience-wrapper">
-        <li class="experience-line">
-          <div class="experience-content">
-            <div class="trackline-dot"></div>
-            <h3>Software Engineer</h3>
-            <p>
-              Development and maintenance of an intelligent conversational tool.
-              Integration of machine learning pipelines within application
-              environments (API).
-            </p>
-          </div>
-          <div class="experience-coord">
-            <p>From May to August 2019</p>
-            <p>Lille - France</p>
-          </div>
-        </li>
-        <li class="experience-line">
-          <div class="experience-content">
-            <div class="trackline-dot"></div>
-            <h3>Software Engineer</h3>
-            <p>
-              Development of monitoring service for trained models by craft ai.
-              I'm also working on a research topic to optimize data processing
-              through microservices with Apache kafka.
-            </p>
-          </div>
-          <div class="experience-coord">
-            <p>From October 2019 to January 2020</p>
-            <p>Paris - France</p>
-          </div>
-        </li>
-        <li class="experience-line">
-          <div class="experience-content">
-            <div class="trackline-dot"></div>
-            <h3>Web developer</h3>
-            <p>
-              Development of a JavaScript code documentation tool. Documentation
-              is generated automatically from the comments written by the
-              developers and available online. Code optimization.
-            </p>
-          </div>
-          <div class="experience-coord">
-            <p>From February to August 2020</p>
-            <p>Paris - France</p>
-          </div>
-        </li>
-      </ul>
-
-      <h2 id="skills" class="content-title">SKILLS & QUALIFICATIONS</h2>
-      <div id="skills-wrapper">
-        <ul class="it-skills-wrapper">
-          <li class="it-skills-section">
-            <h3>Backend</h3>
-            <div class="it-skills-content">
-              <p>Node.js [Express]</p>
-              <p>Python [Flask]</p>
-              <p>NoSQL [Mongo]</p>
-              <p>PostgreSQL</p>
+      <section id="education">
+        <h2 id="education-title" class="content-title">EDUCATION</h2>
+        <ul id="education-wrapper">
+          <li class="education-line">
+            <div class="education-coord">
+              <p>2015</p>
+              <p>Marcq-en-Baroeul - France</p>
+            </div>
+            <div class="education-content">
+              <div class="trackline-dot"></div>
+              <h3>High School Diploma</h3>
+              <p>Private High School of Marcq-en-Baroeul</p>
             </div>
           </li>
-          <li class="it-skills-section">
-            <h3>Machine Learning</h3>
-            <div class="it-skills-content">
-              <p>Python [pandas, scikit-learn, tensorflow]</p>
+          <li class="education-line">
+            <div class="education-coord">
+              <p>2015 - 2017</p>
+              <p>Lille - France</p>
+            </div>
+            <div class="education-content">
+              <div class="trackline-dot"></div>
+              <h3>
+                Intensive program preparing for entry to engineering schools
+              </h3>
+              <p>La salle</p>
             </div>
           </li>
-          <li class="it-skills-section">
-            <h3>Frontend</h3>
-            <div class="it-skills-content">
-              <p>TypeScript [Angular]</p>
-              <p>HTML, CCS, JS [ES6]</p>
+          <li class="education-line">
+            <div class="education-coord">
+              <p>2015</p>
+              <p>Marcq-en-Baroeul - France</p>
+            </div>
+            <div class="education-content">
+              <div class="trackline-dot"></div>
+              <h3>HEI diploma, IT specialty</h3>
+              <p>HEI, Hautes Etudes d'Ingénieur</p>
             </div>
           </li>
         </ul>
-        <ul class="it-skills-wrapper">
-          <li class="it-skills-section">
-            <h3>Dev Tools</h3>
-            <div class="it-skills-content">
-              <p>Git</p>
-              <p>Docker</p>
-              <p>Jenkins, Gitlab-ci</p>
-              <p>Testing</p>
+      </section>
+
+      <section id="experience">
+        <h2 id="experience-title" class="content-title">
+          TRAINING & WORK EXPERIENCE
+        </h2>
+        <ul id="experience-wrapper">
+          <li class="experience-line">
+            <div class="experience-content">
+              <div class="trackline-dot"></div>
+              <h3>Software Engineer</h3>
+              <p>
+                Development and maintenance of an intelligent conversational
+                tool. Integration of machine learning pipelines within
+                application environments (API).
+              </p>
+            </div>
+            <div class="experience-coord">
+              <p>From May to August 2019</p>
+              <p>Lille - France</p>
             </div>
           </li>
-          <li class="it-skills-section">
-            <h3>IDEs</h3>
-            <div class="it-skills-content">
-              <p>VS Code</p>
-              <p>IntelliJ</p>
-              <p>XCode</p>
-              <p>Jupyter</p>
+          <li class="experience-line">
+            <div class="experience-content">
+              <div class="trackline-dot"></div>
+              <h3>Software Engineer</h3>
+              <p>
+                Development of monitoring service for trained models by craft
+                ai. I'm also working on a research topic to optimize data
+                processing through microservices with Apache kafka.
+              </p>
+            </div>
+            <div class="experience-coord">
+              <p>From October 2019 to January 2020</p>
+              <p>Paris - France</p>
+            </div>
+          </li>
+          <li class="experience-line">
+            <div class="experience-content">
+              <div class="trackline-dot"></div>
+              <h3>Web developer</h3>
+              <p>
+                Development of a JavaScript code documentation tool.
+                Documentation is generated automatically from the comments
+                written by the developers and available online. Code
+                optimization.
+              </p>
+            </div>
+            <div class="experience-coord">
+              <p>From February to August 2020</p>
+              <p>Paris - France</p>
             </div>
           </li>
         </ul>
-      </div>
+      </section>
 
-      <h2 class="content-title">LANGUAGES</h2>
-      <ul id="languages-wrapper">
-        <li class="language-section">
-          <h3>French</h3>
-          <div class="language-content">
-            <p>Native Speaker</p>
-          </div>
-        </li>
-        <li class="language-section">
-          <h3>English</h3>
-          <div class="language-content">
-            <p>Independent User</p>
-            <p>FCE (First Certificate in English)</p>
-          </div>
-        </li>
-        <li class="language-section">
-          <h3>Spanish</h3>
-          <div class="language-content">
-            <p>Intermediate</p>
-          </div>
-        </li>
-      </ul>
+      <section id="skills">
+        <h2 id="skills-title" class="content-title">SKILLS & QUALIFICATIONS</h2>
+        <div id="skills-wrapper">
+          <ul class="it-skills-wrapper">
+            <li class="it-skills-section">
+              <h3>Backend</h3>
+              <div class="it-skills-content">
+                <p>Node.js [Express]</p>
+                <p>Python [Flask]</p>
+                <p>NoSQL [Mongo]</p>
+                <p>PostgreSQL</p>
+              </div>
+            </li>
+            <li class="it-skills-section">
+              <h3>Machine Learning</h3>
+              <div class="it-skills-content">
+                <p>Python [pandas, scikit-learn, tensorflow]</p>
+              </div>
+            </li>
+            <li class="it-skills-section">
+              <h3>Frontend</h3>
+              <div class="it-skills-content">
+                <p>TypeScript [Angular]</p>
+                <p>HTML, CCS, JS [ES6]</p>
+              </div>
+            </li>
+          </ul>
+          <ul class="it-skills-wrapper">
+            <li class="it-skills-section">
+              <h3>Dev Tools</h3>
+              <div class="it-skills-content">
+                <p>Git</p>
+                <p>Docker</p>
+                <p>Jenkins, Gitlab-ci</p>
+                <p>Testing</p>
+              </div>
+            </li>
+            <li class="it-skills-section">
+              <h3>IDEs</h3>
+              <div class="it-skills-content">
+                <p>VS Code</p>
+                <p>IntelliJ</p>
+                <p>XCode</p>
+                <p>Jupyter</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-      <h2 id="miscellaneous" class="content-title">MISCELLANEOUS</h2>
-      <ul id="miscellaneous-wrapper">
-        <li class="miscellaneous-section">
-          <h3>Field Hockey 🏑</h3>
-          <div class="miscellaneous-content">
-            <p>First French Division</p>
-            <p>3 games in National Team</p>
-          </div>
-        </li>
-        <li class="miscellaneous-section">
-          <h3>Scientific Reading 📚</h3>
-          <div class="miscellaneous-content">
-            <p>Machine Learning</p>
-            <p>Astrophysics</p>
-          </div>
-        </li>
-      </ul>
+      <section id="languages">
+        <h2 class="content-title">LANGUAGES</h2>
+        <ul id="languages-wrapper">
+          <li class="language-section">
+            <h3>French</h3>
+            <div class="language-content">
+              <p>Native Speaker</p>
+            </div>
+          </li>
+          <li class="language-section">
+            <h3>English</h3>
+            <div class="language-content">
+              <p>Independent User</p>
+              <p>FCE (First Certificate in English)</p>
+            </div>
+          </li>
+          <li class="language-section">
+            <h3>Spanish</h3>
+            <div class="language-content">
+              <p>Intermediate</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section id="miscellaneous">
+        <h2 id="miscellaneous-title" class="content-title">MISCELLANEOUS</h2>
+        <ul id="miscellaneous-wrapper">
+          <li class="miscellaneous-section">
+            <h3>Field Hockey 🏑</h3>
+            <div class="miscellaneous-content">
+              <p>First French Division</p>
+              <p>3 games in National Team</p>
+            </div>
+          </li>
+          <li class="miscellaneous-section">
+            <h3>Scientific Reading 📚</h3>
+            <div class="miscellaneous-content">
+              <p>Machine Learning</p>
+              <p>Astrophysics</p>
+            </div>
+          </li>
+        </ul>
+      </section>
     </div>
 
-    <div id="test1">
-      <div id="test2"></div>
-      <div id="test3"></div>
-    </div>
     <footer>
       <h2 id="contact">Contact</h2>
       <div id="contact-wrapper">

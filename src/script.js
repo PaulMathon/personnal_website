@@ -1,3 +1,5 @@
+import { initPage, newPage } from "./page.js";
+
 const HEADER_MIN_SIZE = 24;
 const HEADER_MAX_SIZE = 75;
 const HEADER_TOGGLING_SIZE = 47;
@@ -77,9 +79,32 @@ const toggleHeader = () => {
   }
 };
 
+function disableScrolling() {
+  var x = window.scrollX;
+  var y = window.scrollY;
+  window.onscroll = function () {
+    window.scrollTo(x, y);
+  };
+}
+
+function enableScrolling() {
+  window.onscroll = onScrollEvents;
+}
+
+const onScrollEvents = (scrollEvent) => {
+  const isNewPage = newPage();
+  toggleHeader();
+
+  if (isNewPage) {
+    disableScrolling();
+    setTimeout(() => enableScrolling(), 500);
+  }
+};
+
 const scrollHeaderAnim = () => {
   toggleHeader();
-  window.onscroll = toggleHeader;
+  initPage();
+  window.onscroll = onScrollEvents;
 };
 
 window.onload = () => {
