@@ -15,11 +15,12 @@
       rel="stylesheet"
     />
     <link href="style.css" rel="stylesheet" />
-    <script type="module" src="./script.js"></script>
-    <script type="module" src="./page.js"></script>
+    <script type="module" src="./js/script.js"></script>
+    <script type="module" src="./js/header.js"></script>
+    <script type="module" src="./js/page.js"></script>
   </head>
   <body>
-    <header>
+    <header id="header">
       <div id="header-background">
         <div id="header-background-img"></div>
         <div id="header-background-title">
@@ -37,26 +38,28 @@
       <div id="header-menu-wrapper">
         <nav id="header-menu">
           <div class="header-menu-item">
-            <a class="header-menu-label" href="#education">Education</a>
+            <a id="education-menu" class="header-menu-label">Education</a>
           </div>
           <div class="header-menu-item">
-            <a class="header-menu-label" href="#experience">Experience</a>
+            <a id="experience-menu" class="header-menu-label">Experience</a>
           </div>
           <div class="header-menu-item">
-            <a class="header-menu-label" href="#skills">Skills</a>
+            <a id="skills-menu" class="header-menu-label">Skills</a>
           </div>
           <div class="header-menu-item">
-            <a class="header-menu-label" href="#miscellaneous">Miscellaneous</a>
+            <a id="miscellaneous-menu" class="header-menu-label">
+              Miscellaneous
+            </a>
           </div>
         </nav>
       </div>
     </header>
 
-    <div id="content-wrapper">
+    <div id="page-wrapper">
       <section id="education">
         <h2 id="education-title" class="content-title">EDUCATION</h2>
         <ul id="education-wrapper">
-          <li class="education-line">
+          <li class="timeline-line">
             <div class="education-coord">
               <p>2015</p>
               <p>Marcq-en-Baroeul - France</p>
@@ -67,7 +70,7 @@
               <p>Private High School of Marcq-en-Baroeul</p>
             </div>
           </li>
-          <li class="education-line">
+          <li class="timeline-line">
             <div class="education-coord">
               <p>2015 - 2017</p>
               <p>Lille - France</p>
@@ -80,7 +83,7 @@
               <p>La salle</p>
             </div>
           </li>
-          <li class="education-line">
+          <li class="timeline-line">
             <div class="education-coord">
               <p>2015</p>
               <p>Marcq-en-Baroeul - France</p>
@@ -99,7 +102,7 @@
           TRAINING & WORK EXPERIENCE
         </h2>
         <ul id="experience-wrapper">
-          <li class="experience-line">
+          <li class="timeline-line">
             <div class="experience-content">
               <div class="trackline-dot"></div>
               <h3>Software Engineer</h3>
@@ -114,7 +117,7 @@
               <p>Lille - France</p>
             </div>
           </li>
-          <li class="experience-line">
+          <li class="timeline-line">
             <div class="experience-content">
               <div class="trackline-dot"></div>
               <h3>Software Engineer</h3>
@@ -129,7 +132,7 @@
               <p>Paris - France</p>
             </div>
           </li>
-          <li class="experience-line">
+          <li class="timeline-line">
             <div class="experience-content">
               <div class="trackline-dot"></div>
               <h3>Web developer</h3>
@@ -151,8 +154,8 @@
       <section id="skills">
         <h2 id="skills-title" class="content-title">SKILLS & QUALIFICATIONS</h2>
         <div id="skills-wrapper">
-          <ul class="it-skills-wrapper">
-            <li class="it-skills-section">
+          <ul class="card-wrapper">
+            <li class="it-skills-section card">
               <h3>Backend</h3>
               <div class="it-skills-content">
                 <p>Node.js [Express]</p>
@@ -161,22 +164,20 @@
                 <p>PostgreSQL</p>
               </div>
             </li>
-            <li class="it-skills-section">
+            <li class="it-skills-section card">
               <h3>Machine Learning</h3>
               <div class="it-skills-content">
                 <p>Python [pandas, scikit-learn, tensorflow]</p>
               </div>
             </li>
-            <li class="it-skills-section">
+            <li class="it-skills-section card">
               <h3>Frontend</h3>
               <div class="it-skills-content">
                 <p>TypeScript [Angular]</p>
                 <p>HTML, CCS, JS [ES6]</p>
               </div>
             </li>
-          </ul>
-          <ul class="it-skills-wrapper">
-            <li class="it-skills-section">
+            <li class="it-skills-section card">
               <h3>Dev Tools</h3>
               <div class="it-skills-content">
                 <p>Git</p>
@@ -185,7 +186,7 @@
                 <p>Testing</p>
               </div>
             </li>
-            <li class="it-skills-section">
+            <li class="it-skills-section card">
               <h3>IDEs</h3>
               <div class="it-skills-content">
                 <p>VS Code</p>
@@ -200,21 +201,21 @@
 
       <section id="languages">
         <h2 class="content-title">LANGUAGES</h2>
-        <ul id="languages-wrapper">
-          <li class="language-section">
+        <ul id="languages-wrapper" class="card-wrapper">
+          <li class="language-section card">
             <h3>French</h3>
-            <div class="language-content">
+            <div class="language-content card">
               <p>Native Speaker</p>
             </div>
           </li>
-          <li class="language-section">
+          <li class="language-section card">
             <h3>English</h3>
             <div class="language-content">
               <p>Independent User</p>
               <p>FCE (First Certificate in English)</p>
             </div>
           </li>
-          <li class="language-section">
+          <li class="language-section card">
             <h3>Spanish</h3>
             <div class="language-content">
               <p>Intermediate</p>
@@ -225,15 +226,15 @@
 
       <section id="miscellaneous">
         <h2 id="miscellaneous-title" class="content-title">MISCELLANEOUS</h2>
-        <ul id="miscellaneous-wrapper">
-          <li class="miscellaneous-section">
+        <ul id="miscellaneous-wrapper" class="card-wrapper">
+          <li class="miscellaneous-section card">
             <h3>Field Hockey 🏑</h3>
             <div class="miscellaneous-content">
               <p>First French Division</p>
               <p>3 games in National Team</p>
             </div>
           </li>
-          <li class="miscellaneous-section">
+          <li class="miscellaneous-section card">
             <h3>Scientific Reading 📚</h3>
             <div class="miscellaneous-content">
               <p>Machine Learning</p>

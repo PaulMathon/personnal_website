@@ -28,6 +28,7 @@ let currentPageIndex = getPageIndex();
 
 function newPage() {
   const nextPageIndex = getPageIndex();
+  console.log("nextPageIndex", nextPageIndex);
   let isNewPage = false;
   if (nextPageIndex > currentPageIndex) {
     const nextPageId = pageIds[nextPageIndex];
@@ -69,4 +70,49 @@ function initPage() {
   }
 }
 
-export { newPage, initPage };
+function navigateFromMenu(pageIndex) {
+  currentPageIndex = pageIndex;
+  return (event) => {
+    console.log("actual", currentPageIndex);
+    console.log("next", pageIndex);
+    event.preventDefault;
+    console.log(
+      "SCROLLY",
+      0.2 * window.innerHeight + pageIndex * 0.8 * window.innerHeight
+    );
+    window.scrollTo(0, pageIndex * 0.8 * window.innerHeight);
+    newPage();
+    /* if (currentPageIndex < pageIndex) {
+      document
+        .getElementById(pageIds[currentPageIndex])
+        .classList.add("hide-to-top");
+      document
+        .getElementById(pageIds[currentPageIndex])
+        .classList.remove("show-page");
+      document
+        .getElementById(pageIds[pageIndex])
+        .classList.remove("hide-to-bottom");
+      document.getElementById(pageIds[pageIndex]).classList.add("show-page");
+    } else if (currentPageIndex < pageIndex) {
+      document
+        .getElementById(pageIds[currentPageIndex])
+        .classList.add("hide-to-bottom");
+      document
+        .getElementById(pageIds[currentPageIndex])
+        .classList.remove("show-page");
+      document
+        .getElementById(pageIds[pageIndex])
+        .classList.remove("hide-to-top");
+      document.getElementById(pageIds[pageIndex]).classList.add("show-page");
+    } */
+  };
+}
+
+function onClickMenuBar() {
+  document.getElementById("education-menu").onclick = navigateFromMenu(0);
+  document.getElementById("experience-menu").onclick = navigateFromMenu(1);
+  document.getElementById("skills-menu").onclick = navigateFromMenu(2);
+  document.getElementById("miscellaneous-menu").onclick = navigateFromMenu(4);
+}
+
+export { newPage, initPage, onClickMenuBar };
